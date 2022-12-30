@@ -6,12 +6,14 @@ import 'package:kingslab_test/components/textstyles.dart';
 class HomeInner extends StatefulWidget {
   final id;
   final title;
+  final price;
   final description;
   final image;
   const HomeInner(
       {Key? key,
       @required this.id,
       @required this.title,
+      @required this.price,
       @required this.description,
       @required this.image})
       : super(key: key);
@@ -61,7 +63,19 @@ class _HomeInnerState extends State<HomeInner> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              child: SizedBox(
+                child: Text(
+                  "Price : ${widget.price} \u{20B9}".toString(),
+                  style: Text20black,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),

@@ -70,6 +70,7 @@ Widget homeCard({item, context}) {
                       builder: (context) => HomeInner(
                         id: item.id,
                         title: item.title,
+                        price: item.price,
                         description: item.description,
                         image: item.thumbnail,
                       ),
