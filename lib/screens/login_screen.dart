@@ -2,9 +2,7 @@
 
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:email_validator/email_validator.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 import 'package:kingslab_test/components/flush_bar.dart';
@@ -29,7 +27,6 @@ class _LoginPageState extends State<LoginPage> {
   bool circular = false;
   bool _isHidden = true;
 
-  final storage = FlutterSecureStorage();
   void login(String username, String password) async {
     try {
       Response response = await http.post(
