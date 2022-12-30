@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:kingslab_test/components/colors.dart';
 import 'package:kingslab_test/components/dummy_shimmer.dart';
 import 'package:kingslab_test/components/homecard.dart';
 import 'package:kingslab_test/model/product_model.dart';
@@ -43,6 +46,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Text(
+          "Home Screen",
+          style: TextStyle(
+            color: kBlackColor,
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
       body: loading
           ? bannerShimmer()
           : ListView.builder(
